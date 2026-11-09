@@ -63,11 +63,16 @@
                     </td>
                 </tr>
                 {% endfor %}
+                <tr>
+                    <td>Total amount: {{balance}}</td>
+                </tr>
             </tbody>
         </table>
 
         <div class="d-flex justify-content-center">
             <a class="btn btn-success" href="{{ url_for('add_transaction') }}">Add Transaction</a>
+            <a class="btn btn-primary" href="{{ url_for('search_transactions') }}">Search</a>
+            <a class="btn btn-danger" href="{{ url_for('total_balance') }}">Display total balance</a>
         </div>
     </div>
 </body>
